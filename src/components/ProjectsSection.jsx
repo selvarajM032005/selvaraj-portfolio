@@ -3,30 +3,41 @@ import { ArrowRight, ExternalLink, Github } from "lucide-react";
 const projects = [
   {
     id: 1,
-    title: "SaaS Landing Page",
-    description: "A beautiful landing page app using React and Tailwind.",
+    title: "ESP32-Based Smart Health Monitoring System",
+    description:
+      "Developed an embedded health monitoring system using ESP32 with ECG and pulse sensors. Integrated ThingSpeak cloud platform for remote monitoring with multilingual web dashboard.",
     image: "/projects/project1.png",
-    tags: ["React", "TailwindCSS", "Supabase"],
+    tags: ["ESP32", "Embedded C", "IoT", "ThingSpeak", "Web Dashboard"],
     demoUrl: "#",
     githubUrl: "#",
   },
   {
     id: 2,
-    title: "Orbit Analytics Dashboard",
+    title: "AI-Based Agri Bot (Smart Farming System)",
     description:
-      "Interactive analytics dashboard with data visualization and filtering capabilities.",
+      "Developed an IoT-enabled smart farming rover using ESP32 with sensor integration and computer vision for crop detection. Implemented autonomous irrigation monitoring and precision agriculture.",
     image: "/projects/project2.png",
-    tags: ["TypeScript", "D3.js", "Next.js"],
+    tags: ["ESP32", "OpenCV", "IoT", "AI", "Python"],
     demoUrl: "#",
     githubUrl: "#",
   },
   {
     id: 3,
-    title: "E-commerce Platform",
+    title: "Smart Retail Monitoring System",
     description:
-      "Full-featured e-commerce platform with user authentication and payment processing.",
+      "Developed a computer vision-based inventory monitoring system for automated product detection and stock tracking. Implemented real-time shelf monitoring with automated analytics reporting.",
     image: "/projects/project3.png",
-    tags: ["React", "Node.js", "Stripe"],
+    tags: ["Python", "OpenCV", "TensorFlow", "Computer Vision"],
+    demoUrl: "#",
+    githubUrl: "#",
+  },
+  {
+    id: 4,
+    title: "Full Stack Web Application (MERN)",
+    description:
+      "Developed a responsive full-stack web application using React, Node.js, Express, and MongoDB. Implemented RESTful APIs, user authentication, and optimized database operations.",
+    image: "/projects/project4.png",
+    tags: ["React", "Node.js", "Express", "MongoDB", "REST APIs"],
     demoUrl: "#",
     githubUrl: "#",
   },

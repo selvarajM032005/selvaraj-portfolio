@@ -12,20 +12,15 @@ export const AboutSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <h3 className="text-2xl font-semibold">
-              Passionate Web Developer & Tech Creator
+              Full Stack Developer & Embedded Systems Enthusiast
             </h3>
 
             <p className="text-muted-foreground">
-              With over 5 years of experience in web development, I specialize
-              in creating responsive, accessible, and performant web
-              applications using modern technologies.
+              Electronics & Communication Engineering student (Cybersecurity specialization) with strong programming fundamentals in Java, C, and Python. I specialize in building full-stack web applications, REST APIs, and intelligent IoT solutions that solve real-world problems.
             </p>
 
             <p className="text-muted-foreground">
-              I'm passionate about creating elegant solutions to complex
-              problems, and I'm constantly learning new technologies and
-              techniques to stay at the forefront of the ever-evolving web
-              landscape.
+              Proven track record in competitive programming with first-prize wins at international hackathons (VISAI Tech Expo, Pragyan Techfest). Passionate about translating algorithmic thinking into working systems that combine backend robustness with seamless user experiences.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
@@ -50,10 +45,9 @@ export const AboutSection = () => {
                   <Code className="h-6 w-6 text-primary" />
                 </div>
                 <div className="text-left">
-                  <h4 className="font-semibold text-lg"> Web Development</h4>
+                  <h4 className="font-semibold text-lg"> Full Stack Development</h4>
                   <p className="text-muted-foreground">
-                    Creating responsive websites and web applications with
-                    modern frameworks.
+                    Building robust backend systems and responsive frontends using MERN stack, REST APIs, and modern frameworks.
                   </p>
                 </div>
               </div>
@@ -64,10 +58,9 @@ export const AboutSection = () => {
                   <User className="h-6 w-6 text-primary" />
                 </div>
                 <div className="text-left">
-                  <h4 className="font-semibold text-lg">UI/UX Design</h4>
+                  <h4 className="font-semibold text-lg">Embedded Systems & IoT</h4>
                   <p className="text-muted-foreground">
-                    Designing intuitive user interfaces and seamless user
-                    experiences.
+                    Developing intelligent systems using ESP32, sensors, and real-time data processing for smart applications.
                   </p>
                 </div>
               </div>
@@ -79,10 +72,9 @@ export const AboutSection = () => {
                 </div>
 
                 <div className="text-left">
-                  <h4 className="font-semibold text-lg">Project Management</h4>
+                  <h4 className="font-semibold text-lg">DSA & Problem Solving</h4>
                   <p className="text-muted-foreground">
-                    Leading projects from conception to completion with agile
-                    methodologies.
+                    Strong foundation in Data Structures, Algorithms, and competitive programming for optimized solutions.
                   </p>
                 </div>
               </div>
