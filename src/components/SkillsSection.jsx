@@ -3,39 +3,40 @@ import { cn } from "@/lib/utils";
 
 const skills = [
   // Programming Languages
-  { name: "Java", level: 90, category: "programming" },
-  { name: "Python", level: 85, category: "programming" },
-  { name: "C", level: 80, category: "programming" },
-  { name: "JavaScript", level: 88, category: "programming" },
-  { name: "SQL", level: 82, category: "programming" },
+  { name: "Java", category: "programming" },
+  { name: "JavaScript", category: "programming" },
+  { name: "SQL", category: "programming" },
 
   // Frontend
-  { name: "React.js", level: 85, category: "frontend" },
-  { name: "HTML5/CSS3", level: 90, category: "frontend" },
-  { name: "Tailwind CSS", level: 88, category: "frontend" },
-  { name: "Bootstrap", level: 80, category: "frontend" },
+  { name: "React.js", category: "frontend" },
+  { name: "HTML5/CSS3", category: "frontend" },
+  { name: "Bootstrap", category: "frontend" },
 
   // Backend & Databases
-  { name: "Node.js", level: 80, category: "backend" },
-  { name: "Express.js", level: 82, category: "backend" },
-  { name: "MongoDB", level: 75, category: "backend" },
-  { name: "REST APIs", level: 85, category: "backend" },
+  { name: "Node.js", category: "backend" },
+  { name: "Express.js", category: "backend" },
+  { name: "MongoDB", category: "backend" },
+  { name: "REST APIs", category: "backend" },
 
   // Embedded & IoT
-  { name: "ESP32", level: 80, category: "embedded" },
-  { name: "Embedded C", level: 78, category: "embedded" },
-  { name: "IoT", level: 75, category: "embedded" },
-  { name: "Raspberry Pi", level: 72, category: "embedded" },
+  { name: "ESP32", category: "embedded" },
+  { name: "Embedded C", category: "embedded" },
+  { name: "IoT", category: "embedded" },
+  { name: "Raspberry Pi", category: "embedded" },
 
-  // AI/ML & Tools
-  { name: "OpenCV", level: 75, category: "tools" },
-  { name: "TensorFlow", level: 70, category: "tools" },
-  { name: "Git/GitHub", level: 88, category: "tools" },
-  { name: "VS Code", level: 92, category: "tools" },
-  { name: "Linux", level: 80, category: "tools" },
+  // AI / ML
+  { name: "TensorFlow", category: "ai-ml" },
+  { name: "OpenCV", category: "ai-ml" },
+  { name: "NumPy", category: "ai-ml" },
+  { name: "Pandas", category: "ai-ml" },
+  { name: "Scikit-learn", category: "ai-ml" },
+
+  // Tools
+  { name: "Git/GitHub", category: "tools" },
+  { name: "VS Code", category: "tools" },
 ];
 
-const categories = ["all", "programming", "frontend", "backend", "embedded", "tools"];
+const categories = ["all", "programming", "frontend", "backend", "embedded", "ai-ml", "tools"];
 
 export const SkillsSection = () => {
   const [activeCategory, setActiveCategory] = useState("all");
@@ -43,6 +44,7 @@ export const SkillsSection = () => {
   const filteredSkills = skills.filter(
     (skill) => activeCategory === "all" || skill.category === activeCategory
   );
+
   return (
     <section id="skills" className="py-24 px-4 relative bg-secondary/30">
       <div className="container mx-auto max-w-5xl">
@@ -56,37 +58,28 @@ export const SkillsSection = () => {
               key={key}
               onClick={() => setActiveCategory(category)}
               className={cn(
-                "px-5 py-2 rounded-full transition-colors duration-300 capitalize",
+                "px-5 py-2 rounded-full transition-all duration-300 capitalize font-medium",
                 activeCategory === category
-                  ? "bg-primary text-primary-foreground"
-                  : "bg-secondary/70 text-forefround hover:bd-secondary"
+                  ? "bg-primary text-primary-foreground shadow-md shadow-primary/30 scale-105"
+                  : "bg-secondary/70 text-foreground hover:bg-secondary hover:scale-105"
               )}
             >
-              {category}
+              {category === "ai-ml" ? "AI/ML" : category}
             </button>
           ))}
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
           {filteredSkills.map((skill, key) => (
             <div
               key={key}
-              className="bg-card p-6 rounded-lg shadow-xs card-hover"
+              className="group relative bg-card border border-border/50 p-5 rounded-xl shadow-xs card-hover overflow-hidden transition-all duration-300 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 hover:-translate-y-1"
             >
-              <div className="text-left mb-4">
-                <h3 className="font-semibold text-lg"> {skill.name}</h3>
-              </div>
-              <div className="w-full bg-secondary/50 h-2 rounded-full overflow-hidden">
-                <div
-                  className="bg-primary h-2 rounded-full origin-left animate-[grow_1.5s_ease-out]"
-                  style={{ width: skill.level + "%" }}
-                />
-              </div>
-
-              <div className="text-right mt-1">
-                <span className="text-sm text-muted-foreground">
-                  {skill.level}%
-                </span>
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="relative flex items-center justify-center text-center h-full">
+                <h3 className="font-semibold text-base group-hover:text-primary transition-colors duration-300">
+                  {skill.name}
+                </h3>
               </div>
             </div>
           ))}

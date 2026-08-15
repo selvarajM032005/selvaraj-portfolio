@@ -20,6 +20,12 @@ export const HeroSection = () => {
             </span>
           </h1>
 
+          <p className="text-sm md:text-base text-primary font-medium opacity-0 animate-fade-in-delay-2">
+            Chairperson – IEEE Circuits and Systems (CAS) Society, Vel Tech
+            <span className="mx-2 text-muted-foreground">•</span>
+            Student Ambassador – AICTE IDEA Lab
+          </p>
+
           <p className="text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3">
             Software Project Engineer Trainee | Full Stack Developer | Java Programmer
             Passionate about building intelligent systems and solving complex problems with modern technologies.
